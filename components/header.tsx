@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Phone, Mail, ChevronDown } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Phone, Mail, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isProductsOpen, setIsProductsOpen] = useState(false)
-  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
 
   const products = [
     { name: "Water Tanks", slug: "water-tanks" },
@@ -16,7 +16,7 @@ function Header() {
     { name: "Trolleys", slug: "trolleys" },
     { name: "Pallets", slug: "pallets" },
     { name: "Dustbins", slug: "dustbins" },
-  ]
+  ];
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
@@ -34,16 +34,22 @@ function Header() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="text-primary font-medium">Omkar (India) Pvt Ltd — Since 1988</div>
+            <div className="text-primary font-medium">
+              Omkar (India) Pvt Ltd — Since 1988
+            </div>
           </div>
         </div>
 
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-3" aria-label="Omtex Plastics">
+            <Link
+              href="/"
+              className="flex items-center gap-3"
+              aria-label="Omtex Plastics"
+            >
               <img
-                src="/omtex-plastics-logo.svg"
+                src="/omtex-plastics-logo.webp"
                 alt="Omtex Plastics"
                 className="h-8 w-auto md:h-9"
               />
@@ -52,7 +58,10 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link
+              href="/"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Home
             </Link>
             <div
@@ -85,13 +94,22 @@ function Header() {
                 </div>
               )}
             </div>
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link
+              href="/about"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               About
             </Link>
-            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a
+              href="#testimonials"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Trusted By
             </a>
-            <Link href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link
+              href="/contact"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Contact
             </Link>
           </nav>
@@ -145,7 +163,9 @@ function Header() {
                 >
                   Products
                   <ChevronDown
-                    className={`h-4 w-4 transition-transform duration-200 ${isMobileProductsOpen ? "rotate-180" : ""}`}
+                    className={`h-4 w-4 transition-transform duration-200 ${
+                      isMobileProductsOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </Link>
                 <div
@@ -189,7 +209,10 @@ function Header() {
               >
                 Contact
               </Link>
-              <Button className="w-full mt-4" onClick={() => setIsMenuOpen(false)}>
+              <Button
+                className="w-full mt-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Get Quote
               </Button>
             </div>
@@ -197,8 +220,8 @@ function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export { Header }
-export default Header
+export { Header };
+export default Header;

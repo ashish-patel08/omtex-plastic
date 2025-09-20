@@ -1,8 +1,18 @@
-import GoogleTranslateFull from "@/components/google-translate"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
-import dynamic from "next/dynamic"
+import GoogleTranslateFull from "@/components/google-translate";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import dynamic from "next/dynamic";
 
-const GoogleTranslate = dynamic(() => import("@/components/google-translate"), { ssr: false })
+const GoogleTranslate = dynamic(() => import("@/components/google-translate"), {
+  ssr: false,
+});
 
 export function Footer() {
   return (
@@ -12,22 +22,40 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/omtex-plastics-logo.svg" alt="Omtex Plastics" className="h-8 w-auto" />
+              <img
+                src="/omtex-plastics-logo.webp"
+                alt="Omtex Plastics"
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-background/80 leading-relaxed">
-              Omkar (India) Pvt Ltd — Leading manufacturer of premium plastic products for over 30 years. Quality, innovation, and sustainability in every product we create.
+              Omkar (India) Pvt Ltd — Leading manufacturer of premium plastic
+              products for over 30 years. Quality, innovation, and
+              sustainability in every product we create.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-background/60 hover:text-background transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-background transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-background transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-background transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-background transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -71,12 +99,18 @@ export function Footer() {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2 text-background/80">
               <li>
-                <a href="#about" className="hover:text-background transition-colors">
+                <a
+                  href="#about"
+                  className="hover:text-background transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#products" className="hover:text-background transition-colors">
+                <a
+                  href="#products"
+                  className="hover:text-background transition-colors"
+                >
                   Our Products
                 </a>
               </li>
@@ -91,7 +125,10 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-background transition-colors">
+                <a
+                  href="#contact"
+                  className="hover:text-background transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -104,12 +141,14 @@ export function Footer() {
             <div className="space-y-3 text-background/80">
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">Mahalaxmi Mill, Survey No. 13, Omkar Compound, Narol - Vatva Rd, Ahmedabad, Gujarat 382443
+                <span className="text-sm">
+                  Mahalaxmi Mill, Survey No. 13, Omkar Compound, Narol - Vatva
+                  Rd, Ahmedabad, Gujarat 382443
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">+91  xxx-xxxxxx</span>
+                <span className="text-sm">+91 xxx-xxxxxx</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0" />
@@ -120,9 +159,12 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/60">
-          <p>&copy; 2024 Omkar (India) Pvt Ltd (OMTEX). All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>
+            &copy; 2024 Omkar (India) Pvt Ltd (OMTEX). All rights reserved. |
+            Privacy Policy | Terms of Service
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

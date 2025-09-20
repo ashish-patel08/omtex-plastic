@@ -108,7 +108,7 @@ export function Hero() {
               <CarouselContent>
                 {[
                   {
-                    src: "/modern-plastic-manufacturing-facility-with-water-t.jpg",
+                    src: "/banner1.webp",
                     alt: "Modern plastic manufacturing facility",
                   },
                   {

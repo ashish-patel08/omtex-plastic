@@ -19,7 +19,7 @@ const products = [
     description:
       "Durable water storage solutions for residential and commercial use. Available in various capacities from 500L to 10,000L.",
     icon: Droplets,
-    image: "/large-blue-plastic-water-storage-tank.jpg",
+    image: "/VERTICAL-TANK.webp",
     features: [
       "UV Resistant",
       "Food Grade Material",
@@ -35,7 +35,7 @@ const products = [
     description:
       "Compact overhead water storage tanks designed for space-efficient installation in residential lofts and buildings.",
     icon: Home,
-    image: "/compact-black-plastic-loft-water-tank.jpg",
+    image: "/Loft-Tank1.webp",
     features: [
       "Space Saving",
       "Lightweight",
@@ -51,7 +51,7 @@ const products = [
     description:
       "Heavy-duty plastic trolleys for material handling in warehouses, factories, and commercial establishments.",
     icon: Truck,
-    image: "/industrial-plastic-trolley-with-wheels-for-materia.jpg",
+    image: "/Trolleys.webp",
     features: [
       "High Load Capacity",
       "Smooth Wheels",
@@ -67,7 +67,7 @@ const products = [
     description:
       "Robust plastic pallets for efficient storage and transportation of goods. Ideal for logistics and warehousing.",
     icon: Package,
-    image: "/blue-plastic-pallet-for-warehouse-storage-and-logi.jpg",
+    image: "/pallets.webp",
     features: [
       "Stackable Design",
       "Forklift Compatible",
@@ -83,7 +83,7 @@ const products = [
     description:
       "Comprehensive range of waste management solutions including household and commercial dustbins with various capacities.",
     icon: Trash2,
-    image: "/colorful-plastic-dustbins-and-waste-bins-for-recyc.jpg",
+    image: "/Dustbins.webp",
     features: [
       "Multiple Colors",
       "Pedal Operation",
@@ -120,7 +120,7 @@ export function ProductGrid() {
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                   {product.badge}
