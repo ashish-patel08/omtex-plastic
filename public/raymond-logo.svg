@@ -1,0 +1,7 @@
+<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red background -->
+  <rect width="120" height="60" fill="#dc2626" rx="4"/>
+  
+  <!-- Raymond text in white calligraphic style -->
+  <text x="60" y="35" font-family="serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle" font-style="italic">Raymond</text>
+</svg>

@@ -116,8 +116,8 @@ export function Hero() {
                     alt: "Plastic pallets in warehouse",
                   },
                   {
-                    src: "/industrial-trolley-in-warehouse.jpg",
-                    alt: "Industrial trolleys in warehouse",
+                    src: "/heavy-duty-plastic-trolley.jpg",
+                    alt: "Heavy duty plastic trolley",
                   },
                   {
                     src: "/large-blue-plastic-water-storage-tank.jpg",
