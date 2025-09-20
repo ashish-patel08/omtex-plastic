@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
-import { SectionHeading } from "@/components/section-heading"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -17,47 +17,52 @@ export function ContactSection() {
     phone: "",
     company: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const mapsQuery = encodeURIComponent(
     "13, Sumit Compound, B/h Mahalaxmi Mill, Narolgam, Ahmedabad, Gujarat 382443"
-  )
-  const mapsEmbedSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5195.009799678447!2d72.59006054771663!3d22.971335936951544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f07191c593%3A0x214931cd14677207!2sOmkar%20India%20Private%20Limited!5e0!3m2!1sen!2sin!4v1758195393443!5m2!1sen!2sin"
-  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`
+  );
+  const mapsEmbedSrc =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5195.009799678447!2d72.59006054771663!3d22.971335936951544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f07191c593%3A0x214931cd14677207!2sOmkar%20India%20Private%20Limited!5e0!3m2!1sen!2sin!4v1758195393443!5m2!1sen!2sin";
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
 
   return (
     <section id="contact" className="py-20 pb-0 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-10">
-          <SectionHeading className="text-3xl lg:text-5xl mb-4">Get in Touch</SectionHeading>
+          <SectionHeading className="text-3xl lg:text-5xl mb-4">
+            Get in Touch
+          </SectionHeading>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Ready to discuss your plastic product requirements? Our team is here to help you find the perfect solution
-            for your needs.
+            Ready to discuss your plastic product requirements? Our team is here
+            to help you find the perfect solution for your needs.
           </p>
         </div>
       </div>
-
-      
 
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6 font-[family-name:var(--font-playfair)]">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6 font-[family-name:var(--font-playfair)]">
+                Contact Information
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -92,7 +97,7 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-semibold mb-1">Phone Numbers</h4>
                     <p className="text-muted-foreground">
-                      Sales: +91  xxxx-xxxx
+                      Sales: +91 xxxx-xxxx
                       <br />
                       Support: +91 xxxx-xxxx
                     </p>
@@ -135,13 +140,18 @@ export function ContactSection() {
           {/* Contact Form */}
           <Card className="border-0 bg-muted/50">
             <CardHeader>
-              <CardTitle className="text-2xl font-[family-name:var(--font-playfair)]">Send us a Message</CardTitle>
+              <CardTitle className="text-2xl font-[family-name:var(--font-playfair)]">
+                Send us a Message
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Full Name *
                     </label>
                     <Input
@@ -154,7 +164,10 @@ export function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Email Address *
                     </label>
                     <Input
@@ -171,7 +184,10 @@ export function ContactSection() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Phone Number
                     </label>
                     <Input
@@ -180,11 +196,14 @@ export function ContactSection() {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 xxxx-xxxx"
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Company Name
                     </label>
                     <Input
@@ -198,7 +217,10 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -224,7 +246,12 @@ export function ContactSection() {
       {/* Full-width Map (outside container) */}
       <div
         className="relative overflow-hidden"
-        style={{ width: "99vw", marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)", marginTop: "3rem" }}
+        style={{
+          width: "99vw",
+          marginLeft: "calc(50% - 50vw)",
+          marginRight: "calc(50% - 50vw)",
+          marginTop: "3rem",
+        }}
       >
         <div className="relative w-full h-[400px]">
           <iframe
@@ -238,5 +265,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
